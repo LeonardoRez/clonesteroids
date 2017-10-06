@@ -16,29 +16,38 @@ func _ready():
 	pos = screen_size / 2
 	set_pos(pos)
 	set_process(true)
-	
+
 func _process(delta):
-	if Input.is_action_pressed("giro_esq"):
-		rot += rot_speed * delta	
-	if Input.is_action_pressed("giro_dir"):
-		rot -= rot_speed * delta
+	var d = 0
+	var e = 0
+	var c = 0
+	var b = 0
+	
 	if Input.is_action_pressed("cima"):
-		acc = Vector2(thrust, 0).rotated(rot)
-	else:
-		acc = Vector2(0, 0)
+		c = 1
+
+#	if Input.is_action_pressed("esquerda"):
+#		e = -1
+#	if Input.is_action_pressed("direita"):
+#		d = 1
+#	if Input.is_action_pressed("baixo"):
+#		b = 1
+	
+	if Input.is_action_pressed("giro_dir"):
+		rotate(-0.1)
+		c = 0
+		#print(get_rot())
+	if Input.is_action_pressed("giro_esq"):
+		rotate(0.1)
+		c = 0
+		#print(get_rot())
+	if Input.is_action_pressed("tiro"):
+		var tiro = pre_tiro.instance()
+		tiro.set_global_pos(get_global_pos())
+		#tiro.set_dir_x()
+		#tiro.set_dir_y()
+		tiro.rotate(get_rot())
+		get_node("../").add_child(tiro)
 		pass
-		
-	acc += vel * -friction
-	vel += acc * delta
-	pos += vel * delta
-	if pos.x > screen_size.width:
-		pos.x = 0
-	if pos.x < 0:
-		pos.x = screen_size.width
-	if pos.y > screen_size.height:
-		pos.y = 0
-	if pos.y < 0:
-		pos.y = screen_size.height
-	set_pos(pos)
-		
-	set_rot(rot - PI/2)
+	set_pos(get_pos() + Vector2(vel*(cos(get_rot()+PI/2)*c),vel*(sin(get_rot()+PI/2)*-c))*delta)
+	pass
