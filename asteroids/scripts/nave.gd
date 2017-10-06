@@ -1,17 +1,21 @@
 extends Node2D
 
-var vel = 500;
-var pre_tiro = preload("res://scenes/tiro.tscn")
+export var rot_speed = 2.6
+export var thrust = 500
+export var max_vel = 400
+export var friction = 0.65
+
+var screen_size = Vector2()
+var rot = 0
+var pos = Vector2()
+var vel = Vector2()
+var acc = Vector2()
 
 func _ready():
+	screen_size = get_viewport_rect().size
+	pos = screen_size / 2
+	set_pos(pos)
 	set_process(true)
-	pass
-
-func calc_direcao(centro , rad):
-	var p = [ cos(rad) , sin(rad) ]
-	
-	
-	return
 
 func _process(delta):
 	var d = 0
