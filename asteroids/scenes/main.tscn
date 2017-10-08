@@ -6,6 +6,6 @@
 
 [node name="nave" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 629.51, 276.042 )
+transform/pos = Vector2( 450, 450 )
 
 
