@@ -1,6 +1,6 @@
 extends Node2D
 
-var vel = 500
+var vel = 1200
 var dir_x = 0
 var dir_y = 0
 
@@ -8,6 +8,7 @@ func _ready():
 	set_process(true)
 	
 	pass
+	
 func set_dir_x(x_temp):
 	dir_x = x_temp
 	pass
