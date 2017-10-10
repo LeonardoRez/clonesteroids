@@ -1,14 +1,39 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scripts/nave.gd" type="Script" id=1]
 [ext_resource path="res://sprites/playerShip3_blue.png" type="Texture" id=2]
 
-[node name="nave" type="Node2D"]
+[sub_resource type="CircleShape2D" id=1]
 
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="nave" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 3.90231, 0, 0, 3.57273, 0.00961304, -0.0838242 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
 script/script = ExtResource( 1 )
+rot_speed = 2.6
+thrust = 500
+max_vel = 400
+friction = 0.65
 
 [node name="sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0.00961304, -0.0838242 )
+transform/scale = Vector2( 3.90231, 3.57273 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
 
