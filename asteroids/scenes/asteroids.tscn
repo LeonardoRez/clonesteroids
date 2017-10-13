@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scripts/asteroids.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Meteors/meteorGrey_med1.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="asteroids" type="KinematicBody2D"]
+
+transform/pos = Vector2( 225.826, 130.204 )
+transform/scale = Vector2( 0.973512, 1 )
+z/relative = false
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.92204, 0, 0, 1.98757, -1.9874, -1.69427 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+bounce = 0.8
+
+[node name="sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -3.31966, -1.94748 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -1.9874, -1.69427 )
+transform/scale = Vector2( 1.92204, 1.98757 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+

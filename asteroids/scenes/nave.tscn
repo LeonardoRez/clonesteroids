@@ -10,6 +10,8 @@ radius = 10.0
 
 [node name="nave" type="Area2D"]
 
+transform/pos = Vector2( 0.312127, 0.447158 )
+transform/scale = Vector2( 0.728504, 0.704776 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 3.90231, 0, 0, 3.57273, 0.00961304, -0.0838242 )

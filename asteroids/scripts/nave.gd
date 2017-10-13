@@ -32,7 +32,7 @@ func _process(delta):
 	if Input.is_action_pressed("tiro"):
 		if ultimo_tiro >= intervalo_tiro:
 			var tiro = pre_tiro.instance()
-			
+			print(get_global_pos())
 			tiro.set_global_pos(get_global_pos())
 			
 			"""tiro.set_dir_x()

@@ -14,7 +14,7 @@ height = 33.3815
 transform/pos = Vector2( 0, -27 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1.16935, 0.875961, 2.14309 )
+shapes/0/transform = Matrix32( 0.636174, 0, 0, 1.16935, 0.362549, 2.14309 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -30,8 +30,8 @@ centered = false
 
 [node name="colisionTiro" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 0.875961, 2.14309 )
-transform/scale = Vector2( 1, 1.16935 )
+transform/pos = Vector2( 0.362549, 2.14309 )
+transform/scale = Vector2( 0.636174, 1.16935 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
