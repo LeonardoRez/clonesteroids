@@ -1,11 +1,50 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scenes/nave.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/asteroids.tscn" type="PackedScene" id=2]
 
 [node name="main" type="Node"]
 
 [node name="nave" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 450, 450 )
+transform/pos = Vector2( 452.051, 347.473 )
+
+[node name="asteroids" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 271.978, 319.855 )
+
+[node name="asteroids 2" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 365.8, 120.952 )
+transform/scale = Vector2( 0.947725, 1 )
+
+[node name="asteroids 3" parent="." instance=ExtResource( 2 )]
+
+[node name="asteroids 4" parent="." instance=ExtResource( 2 )]
+
+[node name="asteroids 5" parent="." instance=ExtResource( 2 )]
+
+[node name="asteroids 6" parent="." instance=ExtResource( 2 )]
+
+[node name="asteroids 7" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 616.103, 149.66 )
+transform/scale = Vector2( 0.947725, 1 )
+
+[node name="asteroids 8" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 52.5691, 313.704 )
+
+[node name="asteroids 9" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 503.689, 274.743 )
+
+[node name="asteroids 10" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 282.23, 34.8295 )
+
+[node name="asteroids 11" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 315.039, 233.732 )
 
 
